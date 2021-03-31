@@ -1,1 +1,8 @@
-<p>author works!</p>
+<h2>
+    {{autores.length + 'Autores'}}
+    <ul>
+        <li *ngFor="let autor of autores">
+            {{autor}}
+        </li>
+    </ul>
+</h2>

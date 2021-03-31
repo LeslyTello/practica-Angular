@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesService } from './courses.service';
 import { AuthorComponent } from './author/author.component';
+import { FavoritoComponent } from './favorito/favorito.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
-    AuthorComponent
+    AuthorComponent,
+    FavoritoComponent
   ],
   imports: [
     BrowserModule,
