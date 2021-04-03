@@ -1,5 +1,4 @@
 <html>
  
-  
-      <app-favorito></app-favorito>
+      <app-favorito [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorito>
 </html>
