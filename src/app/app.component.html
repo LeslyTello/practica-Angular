@@ -1,5 +1,12 @@
 <html>
  
-      <app-favorito [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorito>
+      <!--<app-favorito [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorito>-->
+
+      <!--<bootstrap-panel>
+            <div class="heading">Esto es la cabecera    </div>
+            <div class="body">Esto es el body</div>
+      </bootstrap-panel>  -->
+
+      <app-like [like]="tweet.like" [likesCount]="tweet.likesCount"></app-like>
 </html>
 

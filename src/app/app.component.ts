@@ -17,6 +17,12 @@ export class AppComponent {
     title:'Hola'
   }
 
+
+  tweet={
+    body:"Esto es un teet",
+    likesCount:10,
+    like:true
+  }
   onFavoriteChanged(isFavorite:{newValue:boolean}){
     console.log('Favorite changed ', isFavorite)
   }

@@ -11,7 +11,7 @@ import { CoursesService } from '../courses.service';
     </li>
   </ul>
 
-  <img [src]="tittle">
+  
   `,
   styleUrls: ['./course.component.css']
 })
