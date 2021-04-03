@@ -10,6 +10,8 @@ import { CoursesService } from '../courses.service';
       {{course}}
     </li>
   </ul>
+
+  <img [src]="tittle">
   `,
   styleUrls: ['./course.component.css']
 })
@@ -53,4 +55,22 @@ ATTRIBUTE BINDING [attr.colspan]=''
 DOM> Tree of object in memoty
 HTML> DOM in text atributos en html se traduce en dom pero con excepciones.
 colspan no tiene representancion en DOM
+*/
+
+/*
+Interpolation {{}} -- cambio dianmico de variables heaing, paragraph, 
+Property []="" -- sorter binding of aas property DOM != attributes HTML
+[attr.colsspan]="" -- attribute binding
+[class.active]="isActive"-- class binding
+*/
+
+/*
+ ****COMPONENT API****
+ La idea es que el componente sea reutilizable.Hayq eu añadir input(properties) y otputs(events) properties. lo convierte en API
+
+****SHADOW DOM****
+Scopped style  root= el.createShadowRoot() Solo se aplica al elemento
+encapsulation: ViewEncapsulation.Emulated ** emule shadow dom default usa etiquetas
+encapsulation; ViewEncapsulation.Native ** chrome o safari 10 or more 
+
 */

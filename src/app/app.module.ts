@@ -9,7 +9,8 @@ import { AuthorComponent } from './author/author.component';
 import { AutoresService } from './autores.service';
 import { FavoritoComponent } from './favorito/favorito.component';
 import { FormsModule } from '@angular/forms';
-import { TitleCasePipe } from './title-case.pipe'; //TWO WAY BINDINGS
+import { TitleCasePipe } from './title-case.pipe';
+import { PanelComponent } from './panel/panel.component'; //TWO WAY BINDINGS
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TitleCasePipe } from './title-case.pipe'; //TWO WAY BINDINGS
     CourseComponent,
     AuthorComponent,
     FavoritoComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
