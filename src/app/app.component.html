@@ -1,12 +1,50 @@
 <html>
  
-      <!--<app-favorito [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorito>-->
+      <app-favorito [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorito>
 
       <!--<bootstrap-panel>
             <div class="heading">Esto es la cabecera    </div>
             <div class="body">Esto es el body</div>
       </bootstrap-panel>  -->
 
-      <app-like [like]="tweet.like" [likesCount]="tweet.likesCount"></app-like>
+      <!--<app-like [like]="tweet.like" [likesCount]="tweet.likesCount"></app-like> Like component>-->
+
+      <div *ngIf="courses.length>0; then CoursesList else noCourses">
+           
+      </div>
+     <!-- <div *ngIf="courses.length==0">
+            No courses yet
+      </div>-->
+
+      <ng-template #CoursesList>
+            Listas de cursos
+      </ng-template>
+      <ng-template #noCourses>
+            No hay cursos
+      </ng-template>
+
+      <!--Segunda forma de ver las cosas
+
+      <div [hidden]="courses.length==0">
+
+      </div>-->
+
+      <ul>
+            <li *ngFor="let curso of courses; index as i">
+                 {{i}} - {{curso.name}}
+                 <button (click)="onRemove(curso)">Remove</button>
+            </li>
+      </ul>
+      
+
+      <button (click)="onAdd()" class="btn  btn-info">
+            Add
+      </button>
+
+      <input type="text" appInputFormat>
+
+      <zippy title="Shiping Details">
+            Shiipping details content
+      </zippy>
 </html>
 

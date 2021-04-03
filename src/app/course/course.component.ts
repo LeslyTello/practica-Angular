@@ -73,4 +73,10 @@ Scopped style  root= el.createShadowRoot() Solo se aplica al elemento
 encapsulation: ViewEncapsulation.Emulated ** emule shadow dom default usa etiquetas
 encapsulation; ViewEncapsulation.Native ** chrome o safari 10 or more 
 
+
+
+***DIRECTIVAS
+**NGIF usar el asterisco *ngIf="courses.length>0"
+**NGSWITCHCASE
+
 */
