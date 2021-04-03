@@ -6,21 +6,27 @@ import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesService } from './courses.service';
 import { AuthorComponent } from './author/author.component';
+import { AutoresService } from './autores.service';
 import { FavoritoComponent } from './favorito/favorito.component';
+import { FormsModule } from '@angular/forms';
+import { TitleCasePipe } from './title-case.pipe'; //TWO WAY BINDINGS
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
     AuthorComponent,
-    FavoritoComponent
+    FavoritoComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
-    CoursesService
+    CoursesService,
+    AutoresService
   ],
   bootstrap: [AppComponent]
 })

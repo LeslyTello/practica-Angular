@@ -1,2 +1,13 @@
-
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<button class="btn"
+ [class.btn-info]="isFavorite"
+[class.btn-danger]="!isFavorite"
+(click)="cambiarImagen()"
+ >
+   CAMBIAR DE COLOR
+</button>
+<div>
+   <input type="text" [(ngModel)]="title">
+   <br>
+  <h2>{{title | titleCase}}</h2> 
+</div>

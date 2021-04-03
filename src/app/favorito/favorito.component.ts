@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritoComponent implements OnInit {
 
+  isFavorite:boolean;
+  title:string;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cambiarImagen(){
+    this.isFavorite= !this.isFavorite
   }
 
 }
