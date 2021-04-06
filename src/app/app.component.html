@@ -1,6 +1,7 @@
 <html>
  
-      <app-favorito [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorito>
+      <!--
+      <app-favorito [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorito>-->
 
       <!--<bootstrap-panel>
             <div class="heading">Esto es la cabecera    </div>
@@ -9,19 +10,21 @@
 
       <!--<app-like [like]="tweet.like" [likesCount]="tweet.likesCount"></app-like> Like component>-->
 
+      <!--
       <div *ngIf="courses.length>0; then CoursesList else noCourses">
            
-      </div>
+      </div>-->
      <!-- <div *ngIf="courses.length==0">
             No courses yet
       </div>-->
 
+     <!--
       <ng-template #CoursesList>
             Listas de cursos
       </ng-template>
       <ng-template #noCourses>
             No hay cursos
-      </ng-template>
+      </ng-template>-->
 
       <!--Segunda forma de ver las cosas
 
@@ -29,6 +32,7 @@
 
       </div>-->
 
+      <!--
       <ul>
             <li *ngFor="let curso of courses; index as i">
                  {{i}} - {{curso.name}}
@@ -50,6 +54,14 @@
 
       <app-contact-form></app-contact-form>
   
-            <app-add-course></app-add-course>
+            <app-add-course></app-add-course>-->
+
+
+      <!--<signup-form></signup-form>
+
+       <app-new-course-form></app-new-course-form>-->
+
+      <!-- <new-pass></new-pass>-->
+       <app-web></app-web>
 </html>
 
