@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +21,9 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
 import { NewPassComponent } from './new-pass/new-pass.component';
 import { WebComponent } from './web/web.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AppErrorHandler } from './app-error-handler';
+import { FollowersService } from './servicios/followers.service';
+import { GithubComponent } from './github/github.component';
 
 
 @NgModule({
@@ -39,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     SignupFormComponent,
     NewCourseFormComponent,
     NewPassComponent,
-    WebComponent
+    WebComponent,
+    GithubComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,9 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     CoursesService,
-    AutoresService
+    AutoresService,
+    FollowersService
+    
   ],
   bootstrap: [AppComponent]
 })
