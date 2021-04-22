@@ -1,0 +1,22 @@
+.avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+body{
+    padding: 20px;
+    
+}
+
+.media{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.media-body{
+    margin-right: 10px;
+}
+
+
