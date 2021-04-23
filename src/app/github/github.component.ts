@@ -17,7 +17,7 @@ export class GithubComponent implements OnInit {
     
      this.servicioFollowers.getFollowers().subscribe(
       (respuesta)=>{
-        console.log(respuesta)
+        //console.log(respuesta)
         this.followers=respuesta
       })
       

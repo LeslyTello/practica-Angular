@@ -24,6 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppErrorHandler } from './app-error-handler';
 import { FollowersService } from './servicios/followers.service';
 import { GithubComponent } from './github/github.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule } from '@angular/router';
+import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
+import { GithubProfileComponent } from './github-profile/github-profile.component';
 
 
 @NgModule({
@@ -43,14 +47,23 @@ import { GithubComponent } from './github/github.component';
     NewCourseFormComponent,
     NewPassComponent,
     WebComponent,
-    GithubComponent
+    GithubComponent,
+    NavbarComponent,
+    GithubProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path:'', component:AuthorComponent},
+      {path:'followers', component:GithubComponent},
+      {path:'profile/:id', component:GithubProfileComponent},
+      {path:'**', component:NotFoundComponentComponent
+      }
+    ])
   ],
   providers: [
     CoursesService,
@@ -61,3 +74,5 @@ import { GithubComponent } from './github/github.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+/*ROYER MOUDLE importar en imports RouterMpduel.forRoot() */

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
-import { R3ResolvedDependencyType } from '@angular/compiler';
+
 import { PostService } from '../servicios/post.service';
-import { error } from 'selenium-webdriver';
+
 import { BadInput } from '../common/bad-input';
 
 @Component({
@@ -20,13 +19,7 @@ export class WebComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getPosts()
-    .subscribe(response=>{
-      console.log(response)
-    },error=>{
-      alert('An unexpected error occured')
-      console.log(error)
-    });
+   
   }
 
   

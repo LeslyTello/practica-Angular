@@ -7,7 +7,16 @@
 
     
 <div class="media-body">
-    <h4 class="media-heading">{{seguidor.login}}</h4>
+    <h4 class="media-heading">
+        <a [routerLink]="['/profile', seguidor.id, seguidor.login]" >{{seguidor.login}}</a>
+    </h4>
     <a href="seguidor.html_url">{{seguidor.html_url}}</a>
 </div>
 </div>
+
+<!--Simple route
+-a routerLink=""
+property binding
+[routeLink]="['',]"
+
+-->
