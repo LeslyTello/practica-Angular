@@ -28,7 +28,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -57,13 +60,17 @@ import { GithubProfileComponent } from './github-profile/github-profile.componen
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       {path:'', component:AuthorComponent},
       {path:'followers', component:GithubComponent},
       {path:'profile/:id', component:GithubProfileComponent},
       {path:'**', component:NotFoundComponentComponent
       }
-    ])
+    ]),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule // firestore
+   
   ],
   providers: [
     CoursesService,

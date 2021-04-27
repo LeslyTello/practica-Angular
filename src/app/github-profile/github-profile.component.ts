@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-github-profile',
@@ -8,7 +8,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class GithubProfileComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute) {
+
+   }
 
   ngOnInit(): void {
 
@@ -21,6 +23,8 @@ export class GithubProfileComponent implements OnInit {
         console.log(id)
       })*/
   }
+
+
 
 }
 
@@ -62,4 +66,41 @@ obs.subscribe((respuestaFinal)=>{
 })
 
 this.service.getFollower({id:id, page:page})
+
+
+***SWITCH 
+
+Observable: any coleccion
+usando map: observable de any
+
+Response---
+    map
+        --- Any
+
+import rxjsadd/operador/map
+/switchmap
+
+  let obs= Observable.combineLatest([
+  this.route.paramMap,
+  this.route,queryMap
+]).map/ switchMap(combined=>{
+
+}).subsribe
+
+obs.subscribe((respuestaFinal)=>{
+  let id=respuesta[0].get('id');
+  let page= respuesta[1].get('page')
+
+})
+
+
+PROGRAMMATIC NAVIGATION
+
 */
+
+/*constructor(private router:Router) { }
+  this.router.navigate(['/followers],{
+    queryParams:{page:1,order:'newest'}
+  })
+*/
+
