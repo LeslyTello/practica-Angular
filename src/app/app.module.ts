@@ -32,6 +32,17 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { MatSliderModule } from '@angular/material/slider';
+import { AngularMaterialComponent } from './angular-material/angular-material.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatChipsModule} from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
@@ -52,7 +63,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
     WebComponent,
     GithubComponent,
     NavbarComponent,
-    GithubProfileComponent
+    GithubProfileComponent,
+    AngularMaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -65,12 +77,21 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
       {path:'', component:AuthorComponent},
       {path:'followers', component:GithubComponent},
       {path:'profile/:id', component:GithubProfileComponent},
+      {path:'material', component: AngularMaterialComponent},
       {path:'**', component:NotFoundComponentComponent
       }
     ]),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule // firestore
-   
+    AngularFirestoreModule, // firestore
+    MatSliderModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule,
+    MatChipsModule
   ],
   providers: [
     CoursesService,

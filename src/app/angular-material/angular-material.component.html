@@ -1,0 +1,70 @@
+
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<br>
+<!--Checkbox-->
+<mat-checkbox>Suscribete</mat-checkbox>
+<!-- Radio buttons-->
+<br>
+<mat-radio-group value="1" aria-label="Seleccione una opcion">
+    <mat-radio-button value="1">Male</mat-radio-button>
+    <mat-radio-button value="2">Female</mat-radio-button>
+   <!--<mat-radio-button value="2" [checked]="isChecked">Female</mat-radio-button>--> 
+
+  </mat-radio-group>
+
+<br>
+
+<!--SELECT-->
+
+<select>
+    <option *ngFor="let color of colors" [value]="color.id">{{color.name}}</option>
+</select>
+<br>
+<br>
+<h4>Basic mat-select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let color of colors" [value]="color.id">
+      {{color.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<br>
+
+<!--DATE PICKERS-->
+
+<mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input (focus)="picker.open()" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <br>
+  <span class="material-icons md-dark">face</span>
+  <br>
+
+  <section>
+    <div class="example-label">Basic</div>
+    <div class="example-button-row">
+      <button mat-button mat-fab>Basic</button>
+      <button mat-button mat-raised-button color="primary">Primary</button>
+      <button mat-button color="accent">Accent</button>
+      <button mat-button color="warn">Warn</button>
+      <button mat-button disabled>Disabled</button>
+      <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+
+  <!--CHIPS-->
+
+  <mat-chip-list aria-label="Fish selection">
+    <mat-chip (click)="color.selected=! color.selected" [selected]="color.selected" *ngFor='let color of colors'>{{color.name}} </mat-chip>
+    <mat-chip>Two fish</mat-chip>
+
+    <mat-chip (click)="selectCategory(color)" [selected]="color.selected" *ngFor='let color of colors'>{{color.name}} </mat-chip>
+    <!--<mat-chip color="primary" selected>Primary fish</mat-chip>
+    <mat-chip color="accent" selected>Accent fish</mat-chip>-->
+  </mat-chip-list>
